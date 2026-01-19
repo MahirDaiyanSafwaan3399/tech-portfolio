@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import ProjectCard from "./components/ProjectCard";
+import Footer from "./components/Footer/Footer";
 import { ArrowRight, Trophy, Code2, Heart, ExternalLink, Github, Mail, Sparkles } from "lucide-react";
 
 export default function Home() {
@@ -146,23 +147,11 @@ export default function Home() {
           </div>
         </section>
 
+
         {/* FOOTER */}
-        <section id="contact" className="py-12 md:py-20 flex flex-col items-center justify-center text-center space-y-8 scroll-mt-32">
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-navy dark:text-white">
-            Let's build <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric to-lemon">impact</span>.
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4">
-             <a href="mailto:msafwaan30@gmail.com" className="px-8 py-3 rounded-full bg-navy dark:bg-white text-white dark:text-navy font-medium hover:scale-105 transition-transform shadow-lg shadow-navy/20 dark:shadow-white/20">
-               Email Me
-             </a>
-             <Link href="https://www.linkedin.com/in/safwaan30/" target="_blank" className="px-8 py-3 rounded-full bg-zinc-100 dark:bg-slate text-navy dark:text-white font-medium hover:bg-zinc-200 dark:hover:bg-white dark:hover:text-navy hover:shadow-md transition-all">
-               LinkedIn
-             </Link>
-          </div>
-          <p className="pt-12 text-slate/60 dark:text-white/40 text-sm">
-            © {new Date().getFullYear()} MAHIR. All rights reserved.
-          </p>
-        </section>
+        <div id="contact" className="w-full bg-zinc-50 dark:bg-slate/5 rounded-[2.5rem] border border-zinc-200 dark:border-white/5 overflow-hidden">
+            <Footer />
+        </div>
       </main>
     </div>
   );
