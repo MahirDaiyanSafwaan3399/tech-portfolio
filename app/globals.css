@@ -1,26 +1,106 @@
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Lemonade Palette */
+  --lemon-navy: #0A1930;
+  --lemon-slate: #25344B;
+  --lemon-blue: #246AF3;
+  --lemon-yellow: #FEC947;
+  --lemon-white: #FFFFFF;
+
+  --background: #FFFFFF;
+  --foreground: #0A1930;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-navy: var(--lemon-navy);
+  --color-slate: var(--lemon-slate);
+  --color-electric: var(--lemon-blue);
+  --color-lemon: var(--lemon-yellow);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0A1930;
+    --foreground: #FFFFFF;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(36, 106, 243, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(36, 106, 243, 0.05) 1px, transparent 1px);
+  }
+  
+  .dark .bg-grid-pattern {
+    background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, #246AF3, #FEC947);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+     background: linear-gradient(to right, #FEC947, #F59E0B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .blob {
+    position: absolute;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.5;
+    animation: blob-bounce 10s infinite ease-in-out alternate;
+  }
+  
+  .blob-1 { background: #246AF3; width: 300px; height: 300px; top: 0; left: 0; animation-delay: 0s; }
+  .blob-2 { background: #FEC947; width: 350px; height: 350px; top: 10%; right: 0; animation-delay: 2s; }
+  .blob-3 { background: #25344B; width: 250px; height: 250px; bottom: 10%; left: 20%; animation-delay: 4s; }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blob-bounce {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(20px, -20px) scale(1.1); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #3b82f6; /* blue-500 */
+  color: white;
 }
