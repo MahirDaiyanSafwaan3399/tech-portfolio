@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import ProjectCard from "./components/ProjectCard";
 import Footer from "./components/Footer/Footer";
 import { ArrowRight, Trophy, Code2, Heart, ExternalLink, Github, Mail, Sparkles } from "lucide-react";
+import { BorderBeam } from "./components/ui/BorderBeam";
+import { Spotlight } from "./components/ui/Spotlight";
 
 export default function Home() {
   return (
@@ -22,7 +24,9 @@ export default function Home() {
 
         {/* HERO SECTION */}
         <section className="relative flex flex-col items-center text-center space-y-8 animate-fade-up pt-12 md:pt-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-slate/50 backdrop-blur-md border border-electric/20 text-sm font-medium text-slate dark:text-zinc-300 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-slate/50 backdrop-blur-md border border-electric/20 text-sm font-medium text-slate dark:text-zinc-300 shadow-sm relative overflow-hidden group">
+            {/* Shimmer effect for pill */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
             <Sparkles className="w-4 h-4 text-electric" />
             <span>Based in Bangladesh</span>
             <span className="w-1 h-1 rounded-full bg-zinc-400 dark:bg-zinc-600 mx-1" />
@@ -41,10 +45,11 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 pt-8 w-full sm:w-auto">
             <Link 
               href="#projects"
-              className="group flex items-center justify-center gap-3 px-8 py-4 bg-electric text-white rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 shadow-lg shadow-electric/25 w-full sm:w-auto"
+              className="group flex items-center justify-center gap-3 px-8 py-4 bg-electric text-white rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 shadow-lg shadow-electric/25 w-full sm:w-auto relative overflow-hidden"
             >
-              View My Work
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <span className="relative z-10">View My Work</span>
+              <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 transform-gpu" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
             </Link>
             <a 
               href="mailto:msafwaan30@gmail.com"
@@ -59,6 +64,9 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[minmax(300px,auto)]">
           {/* Recognition Card - Spans 2 cols */}
           <div className="lg:col-span-2 group relative overflow-hidden rounded-3xl bg-white dark:bg-slate/30 border border-zinc-200 dark:border-white/10 p-8 md:p-12 transition-all hover:bg-zinc-50 dark:hover:bg-slate/50 shadow-sm hover:shadow-2xl hover:shadow-electric/10">
+            <Spotlight className="-top-40 -left-40 md:-top-20 md:-left-20" fill="rgba(255, 255, 255, 0.1)" />
+            <BorderBeam size={300} duration={20} delay={5} colorFrom="var(--color-lemon)" colorTo="var(--color-electric)" />
+            
             <div className="absolute top-0 right-0 p-8 md:p-12 opacity-10 group-hover:opacity-20 transition-opacity">
               <Trophy className="w-40 h-40 md:w-64 md:h-64 rotate-12 text-lemon" />
             </div>
@@ -89,10 +97,11 @@ export default function Home() {
           </div>
 
           {/* About Card */}
-          <div className="relative overflow-hidden rounded-3xl bg-navy dark:bg-white p-8 md:p-10 text-white dark:text-navy shadow-xl">
+          <div className="relative overflow-hidden rounded-3xl bg-navy dark:bg-white p-8 md:p-10 text-white dark:text-navy shadow-xl group">
+             <Spotlight className="-top-40 -left-40" fill="rgba(36, 106, 243, 0.2)" />
              <div className="absolute inset-0 bg-gradient-to-br from-electric via-blue-600 to-navy opacity-20 dark:opacity-10" />
              <div className="relative z-10 flex flex-col h-full justify-between">
-               <Code2 className="w-12 h-12 mb-6 opacity-80" />
+               <Code2 className="w-12 h-12 mb-6 opacity-80 group-hover:scale-110 transition-transform duration-500" />
                <div className="space-y-4">
                  <h3 className="text-2xl font-bold">The Code Behind The Cause.</h3>
                  <p className="text-zinc-300 dark:text-slate leading-relaxed font-medium">

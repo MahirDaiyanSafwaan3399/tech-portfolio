@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { ArrowUpRight, Sparkles } from 'lucide-react';
+import { BorderBeam } from '@/app/components/ui/BorderBeam';
+import { Spotlight } from '@/app/components/ui/Spotlight';
 
 interface ProjectCardProps {
   title: string;
@@ -66,8 +68,14 @@ export default function ProjectCard({
       target="_blank"
       className="group relative flex flex-col h-full overflow-hidden rounded-[2.5rem] bg-white/80 dark:bg-slate/20 backdrop-blur-xl border border-zinc-200 dark:border-white/10 transition-all duration-500 hover:scale-[1.01] hover:-translate-y-1 hover:shadow-2xl hover:shadow-electric/10 dark:hover:shadow-black/50 transform-gpu"
     >
+      {/* Spotlights and Beams */}
+      <Spotlight className="-top-40 -left-40 md:-top-20 md:-left-20" fill="rgba(255, 255, 255, 0.15)" />
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
+        <BorderBeam size={200} duration={12} delay={0} colorFrom="var(--color-electric)" colorTo="var(--color-lemon)" />
+      </div>
+
       {/* Dynamic Animated Gradient Background - Subtle */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl ease-out`} />
+      {/* <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl ease-out`} /> */}
       
       {/* Decorative Blobs - Smoother Animation */}
       <div className="absolute -right-20 -top-20 w-72 h-72 bg-electric/10 rounded-full blur-3xl group-hover:bg-electric/20 transition-all duration-1000 group-hover:scale-110 ease-out" />
