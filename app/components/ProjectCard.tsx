@@ -1,7 +1,9 @@
+'use client';
+
 import Link from 'next/link';
-import { ArrowUpRight, Sparkles } from 'lucide-react';
-import { BorderBeam } from '@/app/components/ui/BorderBeam';
-import { Spotlight } from '@/app/components/ui/Spotlight';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -11,132 +13,134 @@ interface ProjectCardProps {
   link: string;
   role?: string;
   award?: string;
-  gradient?: string;
+  images?: string[];
 }
 
 const getTechStyle = (tech: string) => {
   const t = tech.toLowerCase();
-  
+
   if (t.includes('react') || t.includes('next') || t.includes('native') || t.includes('typescript') || t.includes('frontend')) {
-    return "bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border-cyan-500/20 group-hover/tech:border-cyan-500/50 group-hover/tech:bg-cyan-500/20";
+    return "bg-[#78B5AA] text-black border-2 border-black";
   }
-  
+
   if (t.includes('python') || t.includes('ai') || t.includes('nlp') || t.includes('data') || t.includes('ml')) {
-    return "bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/20 group-hover/tech:border-amber-500/50 group-hover/tech:bg-amber-500/20";
+    return "bg-[#ECAE5D] text-black border-2 border-black";
   }
-  
+
   if (t.includes('node') || t.includes('backend') || t.includes('server') || t.includes('api')) {
-    return "bg-violet-500/10 text-violet-700 dark:text-violet-300 border-violet-500/20 group-hover/tech:border-violet-500/50 group-hover/tech:bg-violet-500/20";
+    return "bg-[#DD726D] text-black border-2 border-black";
   }
 
   if (t.includes('design') || t.includes('ui') || t.includes('ux') || t.includes('figma') || t.includes('css') || t.includes('tailwind')) {
-    return "bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/20 group-hover/tech:border-rose-500/50 group-hover/tech:bg-rose-500/20";
+    return "bg-[#78B5AA] text-black border-2 border-black";
   }
 
   if (t.includes('database') || t.includes('sql') || t.includes('mongo') || t.includes('firebase') || t.includes('supabase')) {
-    return "bg-orange-500/10 text-orange-700 dark:text-orange-300 border-orange-500/20 group-hover/tech:border-orange-500/50 group-hover/tech:bg-orange-500/20";
+    return "bg-[#ECAE5D] text-black border-2 border-black";
   }
 
   if (t.includes('payments') || t.includes('stripe') || t.includes('finance')) {
-      return "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/20 group-hover/tech:border-emerald-500/50 group-hover/tech:bg-emerald-500/20";
-  }
-  
-  if (t.includes('mobile') || t.includes('app') || t.includes('android') || t.includes('ios')) {
-      return "bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border-indigo-500/20 group-hover/tech:border-indigo-500/50 group-hover/tech:bg-indigo-500/20";
+    return "bg-[#DD726D] text-black border-2 border-black";
   }
 
-  // Fallback for "offline-first", "real-time" etc to ensure variety
-  if (tech.length % 3 === 0) return "bg-fuchsia-500/10 text-fuchsia-700 dark:text-fuchsia-300 border-fuchsia-500/20 group-hover/tech:border-fuchsia-500/50 group-hover/tech:bg-fuchsia-500/20";
-  if (tech.length % 3 === 1) return "bg-lime-500/10 text-lime-700 dark:text-lime-300 border-lime-500/20 group-hover/tech:border-lime-500/50 group-hover/tech:bg-lime-500/20";
-  
-  return "bg-slate-500/5 text-slate-600 dark:text-slate-300 border-slate-500/10 group-hover/tech:border-electric/30";
+  if (t.includes('mobile') || t.includes('app') || t.includes('android') || t.includes('ios')) {
+    return "bg-[#78B5AA] text-black border-2 border-black";
+  }
+
+  return "bg-white text-black border-2 border-black";
 };
 
-export default function ProjectCard({ 
-  title, 
-  tagline, 
-  description, 
-  techStack, 
-  link, 
+export default function ProjectCard({
+  title,
+  tagline,
+  description,
+  techStack,
+  link,
   role,
   award,
-  gradient = "from-electric/20 to-blue-600/20" 
+  images
 }: ProjectCardProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (!images || images.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [images]);
+
   return (
-    <Link 
-      href={link} 
-      target="_blank"
-      className="group relative flex flex-col h-full overflow-hidden rounded-[2.5rem] bg-white/80 dark:bg-slate/20 backdrop-blur-xl border border-zinc-200 dark:border-white/10 transition-all duration-500 hover:scale-[1.01] hover:-translate-y-1 hover:shadow-2xl hover:shadow-electric/10 dark:hover:shadow-black/50 transform-gpu"
-    >
-      {/* Spotlights and Beams */}
-      <Spotlight className="-top-40 -left-40 md:-top-20 md:-left-20" fill="rgba(255, 255, 255, 0.15)" />
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
-        <BorderBeam size={200} duration={12} delay={0} colorFrom="var(--color-electric)" colorTo="var(--color-lemon)" />
-      </div>
-
-      {/* Dynamic Animated Gradient Background - Subtle */}
-      {/* <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl ease-out`} /> */}
-      
-      {/* Decorative Blobs - Smoother Animation */}
-      <div className="absolute -right-20 -top-20 w-72 h-72 bg-electric/10 rounded-full blur-3xl group-hover:bg-electric/20 transition-all duration-1000 group-hover:scale-110 ease-out" />
-
-      <div className="relative z-10 flex flex-col h-full p-8 md:p-10">
-        {/* Header Section */}
-        <div className="flex justify-between items-start mb-6">
-          <div className="space-y-4">
-             {/* Tagline Badge */}
-             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-100/50 dark:bg-white/5 border border-zinc-200 dark:border-white/10 shadow-sm backdrop-blur-sm group-hover:border-electric/30 transition-colors duration-300">
-                <Sparkles className="w-3.5 h-3.5 text-electric animate-pulse" />
-                <span className="text-xs font-bold tracking-wider text-slate/70 dark:text-zinc-300 uppercase group-hover:text-navy dark:group-hover:text-white transition-colors duration-300">
-                  {tagline}
-                </span>
-             </div>
-            
-            {/* Title & Role */}
-            <div>
-              <h3 className="text-3xl md:text-4xl font-black text-navy dark:text-white tracking-tight group-hover:text-electric dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-white dark:group-hover:to-zinc-400 transition-all duration-300">
-                {title}
-              </h3>
-              {role && (
-                <p className="mt-2 text-sm font-semibold text-slate/60 dark:text-white/40 uppercase tracking-widest group-hover:text-slate dark:group-hover:text-white/60 transition-colors duration-300">
-                  {role}
-                </p>
-              )}
-            </div>
-          </div>
-          
-          {/* Arrow Icon */}
-          <div className="relative p-4 rounded-full bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 overflow-hidden group-hover:bg-electric group-hover:border-electric transition-all duration-500 shadow-lg group-hover:shadow-electric/40">
-             <ArrowUpRight className="relative z-10 w-6 h-6 text-slate dark:text-white group-hover:text-white group-hover:rotate-45 transition-all duration-500" />
-          </div>
-        </div>
-
-        {/* Description */}
-        <p className="text-lg text-slate/80 dark:text-zinc-400 mb-6 leading-relaxed font-light line-clamp-3 group-hover:text-slate dark:group-hover:text-zinc-200 transition-colors duration-300">
-          {description}
-        </p>
-
-        {/* Award Badge */}
-        {award && (
-          <div className="mb-8 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-lemon/10 border border-lemon/20 text-yellow-700 dark:text-lemon text-xs font-semibold">
-            <Sparkles className="w-3 h-3" />
-            {award}
+    <div className="h-full">
+      <Link
+        href={link}
+        target="_blank"
+        className="group relative flex flex-col h-full overflow-hidden bg-[#f4efe6] border-2 border-black transition-all hover:-translate-y-2 hover:shadow-[8px_8px_0px_#000]"
+      >
+        {images && images.length > 0 && (
+          <div className="relative w-full h-56 md:h-64 overflow-hidden border-b-2 border-black shrink-0 bg-black">
+            {images.map((img, idx) => (
+              <Image
+                key={img}
+                src={img}
+                alt={`${title} snapshot ${idx + 1}`}
+                fill
+                className={`object-cover transition-opacity duration-1000 ${idx === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            ))}
+            <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
           </div>
         )}
 
-        {/* Tech Stack Pills */}
-        <div className="mt-auto pt-8 border-t border-zinc-200 dark:border-white/5 flex flex-wrap gap-2.5">
-          {techStack.map((tech, i) => (
-            <span 
-              key={tech} 
-              className={`group/tech px-4 py-2 text-sm font-medium rounded-xl border backdrop-blur-md transition-all duration-300 ${getTechStyle(tech)}`}
-              style={{ transitionDelay: `${i * 50}ms` }}
-            >
-              {tech}
-            </span>
-          ))}
+        <div className="relative z-10 flex flex-col h-full p-6 md:p-8">
+          <div className="flex justify-between items-start mb-6">
+            <div className="space-y-4 max-w-[80%]">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-[#f4efe6] font-black uppercase text-xs">
+                <Sparkles className="w-3.5 h-3.5 animate-pulse text-[#ECAE5D]" />
+                <span>{tagline}</span>
+              </div>
+
+              <div>
+                <h3 className="text-3xl md:text-4xl font-black text-black tracking-tighter uppercase leading-none">
+                  {title}
+                </h3>
+                {role && (
+                  <p className="mt-2 text-sm font-black text-[#DD726D] uppercase tracking-widest">
+                    {role}
+                  </p>
+                )}
+              </div>
+            </div>
+
+            <div className="relative p-3 bg-[#ECAE5D] border-2 border-black overflow-hidden group-hover:bg-[#78B5AA] transition-colors shrink-0">
+              <ArrowRight className="relative z-10 w-6 h-6 text-black group-hover:rotate-[-45deg] transition-transform" />
+            </div>
+          </div>
+
+          <p className="text-lg text-black mb-6 leading-snug font-bold line-clamp-4">
+            {description}
+          </p>
+
+          {award && (
+            <div className="mb-6 inline-flex items-center gap-2 px-3 py-1.5 bg-[#f4efe6] border-2 border-black font-black uppercase text-xs text-black shadow-[4px_4px_0px_#000]">
+              <Sparkles className="w-3 h-3 shrink-0" />
+              <span className="line-clamp-2">{award}</span>
+            </div>
+          )}
+
+          <div className="mt-auto pt-6 border-t-2 border-black flex flex-wrap gap-2">
+            {techStack.map((tech) => (
+              <span
+                key={tech}
+                className={`px-3 py-1 text-xs font-black uppercase shadow-[2px_2px_0px_#000] ${getTechStyle(tech)}`}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
