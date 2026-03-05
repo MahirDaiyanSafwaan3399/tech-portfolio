@@ -13,19 +13,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mahirdaiyansafwaan.vercel.app"),
   title: {
     default: "MAHIR | Impact Engineer",
     template: "%s | MAHIR",
   },
-  description: "The portfolio of Mahir Daiyan Safwaan. World Champion software engineer and creative director building digital lifelines, accessible technology, and crisis response systems from Bangladesh.",
+  description: "The portfolio of Mahir Daiyan Safwaan. World Champion software engineer and creative director building digital lifelines, accessible technology from Bangladesh.",
   keywords: ["Software Engineer", "Impact Engineer", "Web Developer", "Bangladesh", "React Native", "Next.js", "Accessibility", "Creative Developer"],
   openGraph: {
     title: "MAHIR | Impact Engineer",
     description: "World Champion software engineer building digital lifelines.",
-    url: "https://mahir.dev",
+    url: "https://mahirdaiyansafwaan.vercel.app",
     siteName: "MAHIR Portfolio",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/icon.png",
+        width: 512,
+        height: 512,
+        alt: "MAHIR Portfolio Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MAHIR | Impact Engineer",
+    description: "World Champion software engineer building digital lifelines.",
+    images: ["/icon.png"],
   },
 };
 
