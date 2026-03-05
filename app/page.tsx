@@ -11,19 +11,21 @@ export default function Home() {
     <div className="min-h-screen bg-[#f4efe6] selection:bg-black selection:text-[#f4efe6]">
       <Navbar />
 
-      <main className="relative pt-32 pb-40 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto space-y-20 md:space-y-32">
+      <main className="relative pt-24 md:pt-32 pb-40 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto space-y-20 md:space-y-32 overflow-hidden">
         {/* HERO SECTION */}
-        <section className="relative flex flex-col items-start space-y-8 pt-12 md:pt-20 border-l-4 border-black pl-6 md:pl-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 border-2 border-black bg-white text-sm text-black shadow-[4px_4px_0px_#000]">
-            <Sparkles className="w-4 h-4 text-[#DD726D]" />
-            <span className="font-bold uppercase tracking-widest">Based in Bangladesh</span>
-            <span className="w-2 h-2 bg-black rounded-full mx-1" />
-            <span className="font-black uppercase tracking-widest text-[#78B5AA]">Technopreneur & Developer</span>
+        <section className="relative flex flex-col items-start space-y-8 pt-12 md:pt-20 border-l-4 border-black pl-4 sm:pl-6 md:pl-10 ml-2 sm:ml-0">
+          <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 px-4 py-3 sm:py-2 border-2 border-black bg-white text-xs sm:text-sm text-black shadow-[4px_4px_0px_#000]">
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-[#DD726D]" />
+              <span className="font-bold uppercase tracking-widest leading-none">Based in Bangladesh</span>
+            </div>
+            <span className="hidden sm:block w-2 h-2 bg-black rounded-full shrink-0" />
+            <span className="font-black uppercase tracking-widest text-[#78B5AA] leading-none">Technopreneur & Developer</span>
           </div>
 
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] font-black tracking-tighter text-black uppercase leading-[0.9]">
-            Building <br className="hidden md:block" />
-            Digital <span className="bg-[#ECAE5D] px-2 border-2 border-black mt-2 inline-block shadow-[6px_6px_0px_#000]">Lifelines.</span>
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-black tracking-tighter text-black uppercase leading-[0.9] md:leading-[0.9]">
+            Building <br className="hidden sm:block" />
+            Digital <span className="bg-[#ECAE5D] px-2 border-2 border-black mt-2 inline-block shadow-[4px_4px_0px_#000] sm:shadow-[6px_6px_0px_#000]">Lifelines.</span>
           </h1>
 
           <p className="text-xl sm:text-2xl md:text-3xl text-black max-w-3xl leading-snug font-bold">
@@ -58,32 +60,40 @@ export default function Home() {
         {/* BENTO GRID LAYOUT */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-[minmax(300px,auto)]">
           {/* Recognition Card - Spans 2 cols */}
-          <div className="lg:col-span-2 group relative overflow-hidden bg-white border-2 border-black p-8 md:p-12 shadow-[8px_8px_0px_#000] flex flex-col justify-between hover:-translate-y-2 transition-transform">
-            <div className="absolute top-8 right-8 text-black opacity-10">
-              <Trophy className="w-32 h-32 md:w-48 md:h-48" />
-            </div>
-
-            <div className="relative z-10 h-full flex flex-col justify-between">
-              <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ECAE5D] border-2 border-black text-black text-xs font-black uppercase tracking-widest shadow-[2px_2px_0px_#000]">
-                  World Champion
+          <div className="lg:col-span-2 relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-12 shadow-[8px_8px_0px_#000]">
+            <div className="flex flex-col md:flex-row gap-12 items-center h-full">
+              <div className="w-full md:w-1/2 flex flex-col justify-between h-full z-10">
+                <div className="space-y-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ECAE5D] border-2 border-black text-black text-xs font-black uppercase tracking-widest shadow-[2px_2px_0px_#000]">
+                    <Trophy className="w-4 h-4" /> World Champion
+                  </div>
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black uppercase leading-none">
+                    e-ICON World Contest
+                  </h2>
+                  <p className="text-xl font-bold text-black max-w-lg leading-snug">
+                    Ranked #1 globally (Ministry of Education Award, Korea). Led team "Han-da" to build SDG-focused solutions.
+                  </p>
                 </div>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black uppercase leading-none">
-                  e-ICON World Contest
-                </h2>
-                <p className="text-xl font-bold text-black max-w-lg leading-snug">
-                  Ranked #1 globally (Ministry of Education Award, Korea). Led team "Han-da" to build SDG-focused solutions.
-                </p>
+
+                <div className="pt-8 mt-auto">
+                  <a
+                    href="https://e-icon.or.kr/en/2022%eb%85%84-%ec%a0%9c12%ed%9a%8c-%ea%b3%a0%eb%93%b1%eb%b6%80-1%eb%93%b1-%ea%b5%90%ec%9c%a1%eb%b6%80-%ec%9e%a5%ea%b4%80%ec%83%81/"
+                    target="_blank"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-black text-[#f4efe6] font-black uppercase border-2 border-transparent hover:bg-[#DD726D] hover:text-black hover:border-black transition-colors"
+                  >
+                    Verify Achievement <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
 
-              <div className="pt-8">
-                <a
-                  href="https://e-icon.or.kr/en/2022%eb%85%84-%ec%a0%9c12%ed%9a%8c-%ea%b3%a0%eb%93%b1%eb%b6%80-1%eb%93%b1-%ea%b5%90%ec%9c%a1%eb%b6%80-%ec%9e%a5%ea%b4%80%ec%83%81/"
-                  target="_blank"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-black text-[#f4efe6] font-black uppercase border-2 border-transparent hover:bg-[#DD726D] hover:text-black hover:border-black transition-colors"
-                >
-                  Verify Achievement <ExternalLink className="w-4 h-4" />
-                </a>
+              {/* Image Gallery */}
+              <div className="w-full md:w-1/2 grid grid-cols-2 gap-2 sm:gap-4 relative z-10 mt-8 md:mt-0">
+                <div className="relative h-40 sm:h-64 md:h-80 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black md:translate-y-4">
+                  <Image src="/E-Icon World Contest/E icon.jpg" alt="E-ICON World Contest" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+                </div>
+                <div className="relative h-40 sm:h-64 md:h-80 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black md:-translate-y-4">
+                  <Image src="/E-Icon World Contest/E-icon world contest.jpg" alt="E-ICON World Contest" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+                </div>
               </div>
             </div>
           </div>
@@ -135,20 +145,20 @@ export default function Home() {
                 </div>
 
                 {/* Image Gallery */}
-                <div className="w-full md:w-1/2 grid grid-cols-2 gap-4 relative z-10">
-                  <div className="space-y-4 translate-y-8">
-                    <div className="relative h-48 md:h-64 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
+                <div className="w-full md:w-1/2 grid grid-cols-2 gap-2 sm:gap-4 relative z-10 mt-8 md:mt-0">
+                  <div className="space-y-2 sm:space-y-4 md:translate-y-8">
+                    <div className="relative h-32 sm:h-48 md:h-64 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
                       <Image src="/Gigalogy/KHL  (83).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                     </div>
-                    <div className="relative h-40 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
+                    <div className="relative h-32 sm:h-40 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
                       <Image src="/Gigalogy/SHS (166).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                     </div>
                   </div>
-                  <div className="space-y-4">
-                    <div className="relative h-40 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
+                  <div className="space-y-2 sm:space-y-4 pb-0 md:pb-8">
+                    <div className="relative h-32 sm:h-40 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
                       <Image src="/Gigalogy/SHS (178).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                     </div>
-                    <div className="relative h-48 md:h-64 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
+                    <div className="relative h-32 sm:h-48 md:h-64 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
                       <Image src="/Gigalogy/SHS (20).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                     </div>
                   </div>
@@ -231,7 +241,10 @@ export default function Home() {
               description="A cross-platform application utilizing psychological behavioral tracking to provide early intervention and personalized mental health solutions."
               role="Full Stack Dev"
               techStack={["React Native", "Psychology", "Cross-Platform"]}
-              link="#"
+              link="https://drive.google.com/file/d/19IlUdYPhDMskcOL8mlaIB4m7f8zrl41P/view"
+              images={[
+                "/E-Icon World Contest/until the eu.png"
+              ]}
             />
             <ProjectCard
               title="Help A Remian"
