@@ -67,7 +67,7 @@ export default function Home() {
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ECAE5D] border-2 border-black text-black text-xs font-black uppercase tracking-widest shadow-[2px_2px_0px_#000]">
                     <Trophy className="w-4 h-4" /> World Champion
                   </div>
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black uppercase leading-none">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black uppercase leading-none break-words">
                     e-ICON World Contest
                   </h2>
                   <p className="text-xl font-bold text-black max-w-lg leading-snug">
@@ -99,11 +99,11 @@ export default function Home() {
           </div>
 
           {/* About Card */}
-          <div className="relative overflow-hidden bg-[#111111] border-2 border-black p-8 md:p-10 text-[#f4efe6] shadow-[8px_8px_0px_#000] flex flex-col justify-between hover:-translate-y-2 transition-transform">
+          <div className="relative overflow-hidden bg-[#111111] border-2 border-black p-6 sm:p-8 md:p-10 text-[#f4efe6] shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] flex flex-col justify-between hover:-translate-y-2 transition-transform">
             <div className="relative z-10 flex flex-col h-full justify-between">
-              <Code2 className="w-16 h-16 mb-6 text-[#78B5AA]" />
-              <div className="space-y-6">
-                <h3 className="text-3xl md:text-4xl font-black uppercase leading-none">The Code Behind The Cause.</h3>
+              <Code2 className="w-12 h-12 sm:w-16 sm:h-16 mb-6 text-[#78B5AA]" />
+              <div className="space-y-4 sm:space-y-6">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase leading-none break-words">The Code Behind The Cause.</h3>
                 <p className="text-lg font-bold leading-snug opacity-90">
                   I debug society. From enabling democratic rights to helping families in financial distress.
                 </p>
@@ -113,24 +113,24 @@ export default function Home() {
         </div>
 
         {/* EXPERIENCE SECTION */}
-        <section className="space-y-12 pb-10">
-          <div className="flex items-end justify-between border-b-4 border-black pb-8">
-            <h2 className="text-5xl md:text-7xl font-black text-black uppercase tracking-tighter">
+        <section className="space-y-8 sm:space-y-12 pb-10">
+          <div className="flex items-end justify-between border-b-4 border-black pb-4 sm:pb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
               Professional Journey.
             </h2>
           </div>
 
           <div className="space-y-12">
             {/* Gigalogy */}
-            <div className="relative overflow-hidden bg-[#78B5AA] border-2 border-black p-8 md:p-12 shadow-[8px_8px_0px_#000]">
-              <div className="flex flex-col md:flex-row gap-12 items-center">
-                <div className="w-full md:w-1/2 space-y-6 z-10">
-                  <div className="inline-flex items-center px-4 py-2 bg-black text-[#f4efe6] text-xs font-black uppercase tracking-widest border-2 border-black">
+            <div className="relative overflow-hidden bg-[#78B5AA] border-2 border-black p-6 sm:p-8 md:p-12 shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000]">
+              <div className="flex flex-col md:flex-row gap-8 sm:gap-12 items-start md:items-center">
+                <div className="w-full md:w-1/2 space-y-4 sm:space-y-6 z-10">
+                  <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-black text-[#f4efe6] text-[10px] sm:text-xs font-black uppercase tracking-widest border-2 border-black self-start">
                     Jan 2026 – Apr 2026
                   </div>
                   <div>
-                    <h3 className="text-4xl md:text-5xl font-black text-black uppercase leading-none">Gigalogy Technopreneurship Program</h3>
-                    <p className="mt-4 text-base text-black bg-white inline-block px-2 py-1 border-2 border-black uppercase font-black">Program Finalist</p>
+                    <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-black uppercase leading-none break-words hyphens-auto">Gigalogy Technopreneurship Program</h3>
+                    <p className="mt-3 sm:mt-4 text-sm sm:text-base text-black bg-white inline-block px-2 py-1 border-2 border-black uppercase font-black">Program Finalist</p>
                   </div>
                   <p className="text-xl font-bold text-black leading-snug">
                     Completed a rigorous full-stack technical track crafting high-fidelity UI/UX, robust API architecture, and custom AI implementations. Formulated a comprehensive business model through deep-dive market fit analysis, successfully navigating 5 elimination rounds.
@@ -169,14 +169,14 @@ export default function Home() {
             {/* AERD + Dhumketu side-by-side */}
             <div className="grid md:grid-cols-2 gap-8">
               {/* AERD */}
-              <div className="relative overflow-hidden bg-white border-2 border-black p-8 md:p-10 shadow-[8px_8px_0px_#000] flex flex-col hover:-translate-y-1 transition-transform">
-                <div className="space-y-6 flex flex-col h-full">
-                  <div className="inline-flex items-center px-3 py-1.5 bg-[#DD726D] border-2 border-black text-black text-xs font-black uppercase tracking-widest self-start">
+              <div className="relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-10 shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] flex flex-col hover:-translate-y-1 transition-transform">
+                <div className="space-y-4 sm:space-y-6 flex flex-col h-full">
+                  <div className="inline-flex items-center px-3 py-1.5 bg-[#DD726D] border-2 border-black text-black text-[10px] sm:text-xs font-black uppercase tracking-widest self-start">
                     Aug 2024 – Present
                   </div>
                   <div>
-                    <h3 className="text-3xl font-black text-black uppercase leading-none">Amateur Experimental Rocketry BD</h3>
-                    <p className="mt-4 text-sm text-[#f4efe6] bg-black inline-block px-3 py-1 font-black uppercase border-2 border-black">
+                    <h3 className="text-2xl sm:text-3xl font-black text-black uppercase leading-none break-words">Amateur Experimental Rocketry BD</h3>
+                    <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-[#f4efe6] bg-black inline-block px-3 py-1 font-black uppercase border-2 border-black">
                       Avionics & GNC Specialist
                     </p>
                   </div>
@@ -187,14 +187,14 @@ export default function Home() {
               </div>
 
               {/* Dhumketu */}
-              <div className="relative overflow-hidden bg-white border-2 border-black p-8 md:p-10 shadow-[8px_8px_0px_#000] flex flex-col hover:-translate-y-1 transition-transform">
-                <div className="space-y-6 flex flex-col h-full">
-                  <div className="inline-flex items-center px-3 py-1.5 bg-[#ECAE5D] border-2 border-black text-black text-xs font-black uppercase tracking-widest self-start">
+              <div className="relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-10 shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] flex flex-col hover:-translate-y-1 transition-transform">
+                <div className="space-y-4 sm:space-y-6 flex flex-col h-full">
+                  <div className="inline-flex items-center px-3 py-1.5 bg-[#ECAE5D] border-2 border-black text-black text-[10px] sm:text-xs font-black uppercase tracking-widest self-start">
                     Apr 2024 – Oct 2024
                   </div>
                   <div>
-                    <h3 className="text-3xl font-black text-black uppercase leading-none">Dhumketu Exploration Co. Ltd</h3>
-                    <p className="mt-4 text-sm text-[#f4efe6] bg-black inline-block px-3 py-1 font-black uppercase border-2 border-black">
+                    <h3 className="text-2xl sm:text-3xl font-black text-black uppercase leading-none break-words">Dhumketu Exploration Co. Ltd</h3>
+                    <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-[#f4efe6] bg-black inline-block px-3 py-1 font-black uppercase border-2 border-black">
                       Embedded Systems Intern
                     </p>
                   </div>
@@ -208,9 +208,9 @@ export default function Home() {
         </section>
 
         {/* PROJECTS SECTION */}
-        <section id="projects" className="space-y-12 scroll-mt-32">
-          <div className="flex items-end justify-between border-b-4 border-black pb-8">
-            <h2 className="text-5xl md:text-7xl font-black text-black uppercase tracking-tighter">
+        <section id="projects" className="space-y-8 sm:space-y-12 scroll-mt-32">
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between border-b-4 border-black pb-4 sm:pb-8 gap-4">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
               Selected Work.
             </h2>
             <Link href="https://github.com/MahirDaiyanSafwaan3399" target="_blank" className="hidden md:flex items-center gap-2 text-black font-black uppercase border-2 border-black px-4 py-2 hover:bg-black hover:text-[#f4efe6] transition-colors shadow-[4px_4px_0px_#000]">
