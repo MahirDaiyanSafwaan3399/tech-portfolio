@@ -13,7 +13,7 @@ export default function Footer() {
             <Link href="/" className="inline-block border-2 border-black px-4 py-2 hover:bg-black hover:text-[#f4efe6] transition-colors">
               <h2 className="text-4xl font-black tracking-tighter uppercase">MAHIR.</h2>
             </Link>
-            <p className="text-black max-w-sm leading-relaxed text-lg font-bold">
+            <p className="text-black max-w-sm leading-relaxed text-lg font-medium">
               Building digital lifelines and accessible technology for a world in motion. Based in Bangladesh, coding for humanity.
             </p>
 

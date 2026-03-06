@@ -28,7 +28,7 @@ export default function Home() {
             Digital <span className="bg-[#ECAE5D] px-2 border-2 border-black mt-2 inline-block shadow-[4px_4px_0px_#000] sm:shadow-[6px_6px_0px_#000]">Lifelines.</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl md:text-3xl text-black max-w-3xl leading-snug font-bold">
+          <p className="text-xl sm:text-2xl md:text-3xl text-black max-w-3xl leading-snug font-medium">
             I craft resilient software bridging real-world gaps. From accessibility tools for democratic rights to avionics & propulsion systems.
           </p>
 
@@ -70,7 +70,7 @@ export default function Home() {
                   <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black uppercase leading-none break-words">
                     e-ICON World Contest
                   </h2>
-                  <p className="text-xl font-bold text-black max-w-lg leading-snug">
+                  <p className="text-xl font-medium text-black max-w-lg leading-snug">
                     Ranked #1 globally (Ministry of Education Award, Korea). Led team "Han-da" to build SDG-focused solutions.
                   </p>
                 </div>
@@ -104,7 +104,7 @@ export default function Home() {
               <Code2 className="w-12 h-12 sm:w-16 sm:h-16 mb-6 text-[#78B5AA]" />
               <div className="space-y-4 sm:space-y-6">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase leading-none break-words">The Code Behind The Cause.</h3>
-                <p className="text-lg font-bold leading-snug opacity-90">
+                <p className="text-lg font-medium leading-snug opacity-90">
                   I debug society. From enabling democratic rights to helping families in financial distress.
                 </p>
               </div>
@@ -132,7 +132,7 @@ export default function Home() {
                     <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-black uppercase leading-none break-words hyphens-auto">Gigalogy Technopreneurship Program</h3>
                     <p className="mt-3 sm:mt-4 text-sm sm:text-base text-black bg-white inline-block px-2 py-1 border-2 border-black uppercase font-black">Program Finalist</p>
                   </div>
-                  <p className="text-xl font-bold text-black leading-snug">
+                  <p className="text-xl font-medium text-black leading-snug">
                     Completed a rigorous full-stack technical track crafting high-fidelity UI/UX, robust API architecture, and custom AI implementations. Formulated a comprehensive business model through deep-dive market fit analysis, successfully navigating 5 elimination rounds.
                   </p>
                   <div className="flex flex-wrap gap-2 pt-4">
@@ -180,7 +180,7 @@ export default function Home() {
                       Avionics & GNC Specialist
                     </p>
                   </div>
-                  <p className="text-black leading-snug font-bold text-lg">
+                  <p className="text-black leading-snug font-medium text-lg">
                     Designed custom Ground Control Systems (GCS) for real-time telemetry and engine gimbaling based on precision Cartesian servos. Integrated NASA's OPEN MCT for real-time high-fidelity data visualization via MQTT protocols under high-vibration scenarios.
                   </p>
                 </div>
@@ -198,7 +198,7 @@ export default function Home() {
                       Embedded Systems Intern
                     </p>
                   </div>
-                  <p className="text-black leading-snug font-bold text-lg">
+                  <p className="text-black leading-snug font-medium text-lg">
                     Engineered a custom 2-layer STM32 PCB using Altium Designer optimized for high-density routing. Developed and tuned PID control loops and Particle Filters for attitude estimation, significantly reducing flight sensor noise.
                   </p>
                 </div>
