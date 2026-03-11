@@ -23,12 +23,12 @@ export default function Home() {
             <span className="font-black uppercase tracking-widest text-[#78B5AA] leading-none">Technopreneur & Developer</span>
           </div>
 
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-black tracking-tighter text-black uppercase leading-[0.9] md:leading-[0.9]">
+          <h1 className="text-[2.75rem] xs:text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-black tracking-tighter text-black uppercase leading-[0.9] md:leading-[0.9] break-words">
             Building <br className="hidden sm:block" />
             Digital <span className="bg-[#ECAE5D] px-2 border-2 border-black mt-2 inline-block shadow-[4px_4px_0px_#000] sm:shadow-[6px_6px_0px_#000]">Lifelines.</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl md:text-3xl text-black max-w-3xl leading-snug font-medium">
+          <p className="text-lg sm:text-2xl md:text-3xl text-black max-w-3xl leading-snug font-medium">
             I craft resilient software bridging real-world gaps. From accessibility tools for democratic rights to avionics & propulsion systems.
           </p>
 
@@ -87,11 +87,11 @@ export default function Home() {
               </div>
 
               {/* Image Gallery */}
-              <div className="w-full md:w-1/2 grid grid-cols-2 gap-2 sm:gap-4 relative z-10 mt-8 md:mt-0">
-                <div className="relative h-40 sm:h-64 md:h-80 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black md:translate-y-4">
+              <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 relative z-10 mt-8 md:mt-0">
+                <div className="relative h-48 sm:h-64 md:h-80 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black md:translate-y-4">
                   <Image src="/E-Icon World Contest/E icon.jpg" alt="E-ICON World Contest" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
-                <div className="relative h-40 sm:h-64 md:h-80 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black md:-translate-y-4">
+                <div className="relative h-48 sm:h-64 md:h-80 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black md:-translate-y-4">
                   <Image src="/E-Icon World Contest/E-icon world contest.jpg" alt="E-ICON World Contest" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
               </div>
@@ -145,20 +145,20 @@ export default function Home() {
                 </div>
 
                 {/* Image Gallery */}
-                <div className="w-full md:w-1/2 grid grid-cols-2 gap-2 sm:gap-4 relative z-10 mt-8 md:mt-0">
+                <div className="w-full lg:w-1/2 grid grid-cols-2 gap-2 sm:gap-4 relative z-10 mt-8 md:mt-0">
                   <div className="space-y-2 sm:space-y-4 md:translate-y-8">
-                    <div className="relative h-32 sm:h-48 md:h-64 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
+                    <div className="relative h-40 sm:h-48 md:h-64 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
                       <Image src="/Gigalogy/KHL  (83).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                     </div>
-                    <div className="relative h-32 sm:h-40 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
+                    <div className="relative h-40 sm:h-40 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
                       <Image src="/Gigalogy/SHS (166).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                     </div>
                   </div>
                   <div className="space-y-2 sm:space-y-4 pb-0 md:pb-8">
-                    <div className="relative h-32 sm:h-40 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
+                    <div className="relative h-40 sm:h-40 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
                       <Image src="/Gigalogy/SHS (178).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                     </div>
-                    <div className="relative h-32 sm:h-48 md:h-64 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
+                    <div className="relative h-40 sm:h-48 md:h-64 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
                       <Image src="/Gigalogy/SHS (20).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                     </div>
                   </div>

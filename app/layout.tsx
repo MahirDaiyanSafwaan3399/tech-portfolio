@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mahirdaiyansafwaan.vercel.app/"),
+  metadataBase: new URL("https://mmmahir.xyz/"),
   title: {
     default: "MAHIR | Impact Engineer",
     template: "%s | MAHIR",
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MAHIR | Impact Engineer",
     description: "World Champion software engineer building digital lifelines.",
-    url: "https://mahirdaiyansafwaan.vercel.app/",
+    url: "https://mmmahir.xyz/",
     siteName: "MAHIR Portfolio",
     images: [
       {
         url: "/icon.png",
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 630,
         alt: "MAHIR Portfolio Icon",
       },
     ],

@@ -14,6 +14,7 @@
   --color-lemon: #DD726D;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --breakpoint-xs: 480px;
 }
 
 body {

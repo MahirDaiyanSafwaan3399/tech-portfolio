@@ -102,7 +102,7 @@ export default function ProjectCard({
               </div>
 
               <div>
-                <h3 className="text-3xl md:text-4xl font-black text-black tracking-tighter uppercase leading-none">
+                <h3 className="text-2xl xs:text-3xl md:text-4xl font-black text-black tracking-tighter uppercase leading-none break-words">
                   {title}
                 </h3>
                 {role && (
