@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import VideoPlayer from "./components/VideoPlayer";
 import Navbar from "./components/Navbar";
 import ProjectCard from "./components/ProjectCard";
 import Footer from "./components/Footer/Footer";
@@ -122,7 +123,7 @@ export default function Home() {
 
           <div className="space-y-12">
             {/* Gigalogy */}
-            <div className="relative overflow-hidden bg-[#78B5AA] border-2 border-black p-6 sm:p-8 md:p-12 shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000]">
+            <div className="relative overflow-hidden bg-[#78B5AA] border-2 border-black p-6 sm:p-8 md:p-12 shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] flex flex-col gap-10 md:gap-14">
               <div className="flex flex-col md:flex-row gap-8 sm:gap-12 items-start md:items-center">
                 <div className="w-full md:w-1/2 space-y-4 sm:space-y-6 z-10">
                   <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-black text-[#f4efe6] text-[10px] sm:text-xs font-black uppercase tracking-widest border-2 border-black self-start">
@@ -144,24 +145,25 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Image Gallery */}
-                <div className="w-full lg:w-1/2 grid grid-cols-2 gap-2 sm:gap-4 relative z-10 mt-8 md:mt-0">
-                  <div className="space-y-2 sm:space-y-4 md:translate-y-8">
-                    <div className="relative h-40 sm:h-48 md:h-64 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
-                      <Image src="/Gigalogy/KHL  (83).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-                    </div>
-                    <div className="relative h-40 sm:h-40 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
-                      <Image src="/Gigalogy/SHS (166).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-                    </div>
-                  </div>
-                  <div className="space-y-2 sm:space-y-4 pb-0 md:pb-8">
-                    <div className="relative h-40 sm:h-40 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
-                      <Image src="/Gigalogy/SHS (178).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-                    </div>
-                    <div className="relative h-40 sm:h-48 md:h-64 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
-                      <Image src="/Gigalogy/SHS (20).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-                    </div>
-                  </div>
+                {/* Pitch Video Segment */}
+                <div className="w-full lg:w-1/2 relative z-10 mt-8 md:mt-0">
+                  <VideoPlayer videoId="Vjk9YSwrCvk" title="Gigalogy Finale Pitch" />
+                </div>
+              </div>
+
+              {/* Image Gallery Row */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 relative z-10">
+                <div className="relative h-32 sm:h-48 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
+                  <Image src="/Gigalogy/KHL  (83).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+                </div>
+                <div className="relative h-32 sm:h-48 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black md:-translate-y-4">
+                  <Image src="/Gigalogy/SHS (166).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+                </div>
+                <div className="relative h-32 sm:h-48 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black md:translate-y-4">
+                  <Image src="/Gigalogy/SHS (178).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+                </div>
+                <div className="relative h-32 sm:h-48 md:h-56 border-2 border-black shadow-[4px_4px_0px_#000] overflow-hidden bg-black">
+                  <Image src="/Gigalogy/SHS (20).jpg" alt="Gigalogy" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
                 </div>
               </div>
             </div>
