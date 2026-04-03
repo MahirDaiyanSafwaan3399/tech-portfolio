@@ -29,7 +29,7 @@ export default function Home() {
             Digital <span className="bg-[#ECAE5D] px-2 border-2 border-black mt-2 inline-block shadow-[4px_4px_0px_#000] sm:shadow-[6px_6px_0px_#000]">Lifelines.</span>
           </h1>
 
-          <p className="text-lg sm:text-2xl md:text-3xl text-black max-w-3xl leading-snug font-medium">
+          <p className="text-lg sm:text-2xl md:text-3xl text-black max-w-3xl leading-snug font-medium text-justify">
             I craft resilient software bridging real-world gaps. From accessibility tools for democratic rights to avionics & propulsion systems.
           </p>
 
@@ -71,7 +71,7 @@ export default function Home() {
                   <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black uppercase leading-none break-words">
                     e-ICON World Contest
                   </h2>
-                  <p className="text-xl font-medium text-black max-w-lg leading-snug">
+                  <p className="text-xl font-medium text-black max-w-lg leading-snug text-justify">
                     Ranked #1 globally (Ministry of Education Award, Korea). Led team "Han-da" to build SDG-focused solutions.
                   </p>
                 </div>
@@ -105,7 +105,7 @@ export default function Home() {
               <Code2 className="w-12 h-12 sm:w-16 sm:h-16 mb-6 text-[#78B5AA]" />
               <div className="space-y-4 sm:space-y-6">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase leading-none break-words">The Code Behind The Cause.</h3>
-                <p className="text-lg font-medium leading-snug opacity-90">
+                <p className="text-lg font-medium leading-snug opacity-90 text-justify">
                   I debug society. From enabling democratic rights to helping families in financial distress.
                 </p>
               </div>
@@ -133,7 +133,7 @@ export default function Home() {
                     <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-black uppercase leading-none break-words hyphens-auto">Gigalogy Technopreneurship Program</h3>
                     <p className="mt-3 sm:mt-4 text-sm sm:text-base text-black bg-white inline-block px-2 py-1 border-2 border-black uppercase font-black">Program Finalist</p>
                   </div>
-                  <p className="text-xl font-medium text-black leading-snug">
+                  <p className="text-xl font-medium text-black leading-snug text-justify">
                     Completed a rigorous full-stack technical track crafting high-fidelity UI/UX, robust API architecture, and custom AI implementations. Formulated a comprehensive business model through deep-dive market fit analysis, successfully navigating 5 elimination rounds.
                   </p>
                   <div className="flex flex-wrap gap-2 pt-4">
@@ -182,7 +182,7 @@ export default function Home() {
                       Avionics & GNC Specialist
                     </p>
                   </div>
-                  <p className="text-black leading-snug font-medium text-lg">
+                  <p className="text-black leading-snug font-medium text-lg text-justify">
                     Designed custom Ground Control Systems (GCS) for real-time telemetry and engine gimbaling based on precision Cartesian servos. Integrated NASA's OPEN MCT for real-time high-fidelity data visualization via MQTT protocols under high-vibration scenarios.
                   </p>
                 </div>
@@ -200,7 +200,7 @@ export default function Home() {
                       Embedded Systems Intern
                     </p>
                   </div>
-                  <p className="text-black leading-snug font-medium text-lg">
+                  <p className="text-black leading-snug font-medium text-lg text-justify">
                     Engineered a custom 2-layer STM32 PCB using Altium Designer optimized for high-density routing. Developed and tuned PID control loops and Particle Filters for attitude estimation, significantly reducing flight sensor noise.
                   </p>
                 </div>
@@ -264,6 +264,49 @@ export default function Home() {
               techStack={["NLP", "Python", "Data Viz"]}
               link="https://bishleshok-ai.vercel.app/"
             />
+          </div>
+        </section>
+
+        {/* BEYOND THE CODE SECTION */}
+        <section className="space-y-8 sm:space-y-12 pb-10">
+          <div className="flex items-end justify-between border-b-4 border-black pb-4 sm:pb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
+              Beyond The Code.
+            </h2>
+          </div>
+
+          <div className="relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-12 shadow-[8px_8px_0px_#000]">
+            <div className="flex flex-col md:flex-row gap-12 items-center h-full">
+              <div className="w-full md:w-1/2 flex flex-col justify-between h-full z-10">
+                <div className="space-y-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ECAE5D] border-2 border-black text-black text-xs font-black uppercase tracking-widest shadow-[2px_2px_0px_#000]">
+                    <Trophy className="w-4 h-4" /> National Athlete
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black uppercase leading-[1.1] break-words">
+                    40th National Table Tennis Championship
+                  </h2>
+                  <p className="text-xl font-medium text-black max-w-lg leading-snug text-justify">
+                    Represented Rajshahi University of Engineering & Technology (RUET) at the national level under the Bangladesh Table Tennis Federation.
+                  </p>
+                  <p className="text-lg font-medium text-black max-w-lg leading-snug text-justify">
+                    Stepping onto the court was a testament to months of discipline. It reminds me that whether building a complex circuit or engaging in a high-speed rally, success is built on <span className="bg-[#f4efe6] px-1 border-2 border-black font-bold">precision and persistence.</span>
+                  </p>
+                </div>
+              </div>
+
+              {/* Image Gallery equivalent */}
+              <div className="w-full md:w-1/2 relative z-10 mt-8 md:mt-0">
+                <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-auto md:h-[500px] border-2 border-black shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] overflow-hidden bg-black hover:-translate-y-2 transition-transform duration-300">
+                  <Image 
+                    src="/Table Tennis/table tennis.jpg" 
+                    alt="40th National Table Tennis Championship" 
+                    fill 
+                    className="object-cover" 
+                    sizes="(max-width: 768px) 100vw, 50vw" 
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
