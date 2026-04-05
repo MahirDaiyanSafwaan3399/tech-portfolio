@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar";
 import ProjectCard from "./components/ProjectCard";
 import Footer from "./components/Footer/Footer";
 import { ArrowRight, Trophy, Code2, Heart, ExternalLink, Github, Mail, Sparkles } from "lucide-react";
+import { BorderBeam } from "./components/ui/BorderBeam";
+import Marquee from "./components/ui/Marquee";
 
 export default function Home() {
   return (
@@ -33,12 +35,14 @@ export default function Home() {
             I craft resilient software bridging real-world gaps. From accessibility tools for democratic rights to avionics & propulsion systems.
           </p>
 
-          <div className="flex flex-wrap gap-2.5 pt-4 max-w-3xl">
-            {["React Native", "React.js", "Node.js", "Express", "Firebase", "Python", "Kalman Filters", "PID Control", "STM32"].map(skill => (
-              <span key={skill} className="px-4 py-2 border-2 border-black bg-[#f4efe6] text-sm font-black text-black uppercase shadow-[2px_2px_0px_#000] hover:bg-black hover:text-[#f4efe6] transition-colors">
-                {skill}
-              </span>
-            ))}
+          <div className="w-full relative max-w-3xl pt-4 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+            <Marquee className="py-2" pauseOnHover={true} repeat={3}>
+              {["React Native", "React.js", "Node.js", "Express", "Firebase", "Python", "Kalman Filters", "PID Control", "STM32"].map(skill => (
+                <span key={skill} className="px-4 py-2 mx-2 border-2 border-black bg-white text-sm font-black text-black uppercase shadow-[2px_2px_0px_#000] hover:bg-black hover:text-[#f4efe6] transition-colors whitespace-nowrap cursor-pointer">
+                  {skill}
+                </span>
+              ))}
+            </Marquee>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-8 w-full sm:w-auto">
@@ -61,7 +65,8 @@ export default function Home() {
         {/* BENTO GRID LAYOUT */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-[minmax(300px,auto)]">
           {/* Recognition Card - Spans 2 cols */}
-          <div className="lg:col-span-2 relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-12 shadow-[8px_8px_0px_#000]">
+          <div className="lg:col-span-2 relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-12 shadow-[8px_8px_0px_#000] group">
+            <BorderBeam size={300} duration={12} delay={0} borderWidth={3} colorFrom="#111111" colorTo="#ECAE5D" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="flex flex-col md:flex-row gap-12 items-center h-full">
               <div className="w-full md:w-1/2 flex flex-col justify-between h-full z-10">
                 <div className="space-y-6">
@@ -100,7 +105,8 @@ export default function Home() {
           </div>
 
           {/* About Card */}
-          <div className="relative overflow-hidden bg-[#111111] border-2 border-black p-6 sm:p-8 md:p-10 text-[#f4efe6] shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] flex flex-col justify-between hover:-translate-y-2 transition-transform">
+          <div className="relative overflow-hidden bg-[#111111] border-2 border-black p-6 sm:p-8 md:p-10 text-[#f4efe6] shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] flex flex-col justify-between hover:-translate-y-2 transition-transform group">
+            <BorderBeam size={150} duration={12} delay={9} borderWidth={2} colorFrom="#78B5AA" colorTo="#DD726D" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative z-10 flex flex-col h-full justify-between">
               <Code2 className="w-12 h-12 sm:w-16 sm:h-16 mb-6 text-[#78B5AA]" />
               <div className="space-y-4 sm:space-y-6">
@@ -123,7 +129,8 @@ export default function Home() {
 
           <div className="space-y-12">
             {/* Gigalogy */}
-            <div className="relative overflow-hidden bg-[#78B5AA] border-2 border-black p-6 sm:p-8 md:p-12 shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] flex flex-col gap-10 md:gap-14">
+            <div className="relative overflow-hidden bg-[#78B5AA] border-2 border-black p-6 sm:p-8 md:p-12 shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] flex flex-col gap-10 md:gap-14 group">
+              <BorderBeam size={400} duration={14} delay={5} borderWidth={3} colorFrom="#f4efe6" colorTo="#111111" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="flex flex-col md:flex-row gap-8 sm:gap-12 items-start md:items-center">
                 <div className="w-full md:w-1/2 space-y-4 sm:space-y-6 z-10">
                   <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-black text-[#f4efe6] text-[10px] sm:text-xs font-black uppercase tracking-widest border-2 border-black self-start">
@@ -171,8 +178,9 @@ export default function Home() {
             {/* AERD + Dhumketu side-by-side */}
             <div className="grid md:grid-cols-2 gap-8">
               {/* AERD */}
-              <div className="relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-10 shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] flex flex-col hover:-translate-y-1 transition-transform">
-                <div className="space-y-4 sm:space-y-6 flex flex-col h-full">
+              <div className="relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-10 shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] flex flex-col hover:-translate-y-1 transition-transform group cursor-default">
+                <BorderBeam size={200} duration={8} delay={2} borderWidth={3} colorFrom="#DD726D" colorTo="#ECAE5D" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="space-y-4 sm:space-y-6 flex flex-col h-full z-10 relative">
                   <div className="inline-flex items-center px-3 py-1.5 bg-[#DD726D] border-2 border-black text-black text-[10px] sm:text-xs font-black uppercase tracking-widest self-start">
                     Aug 2024 – Present
                   </div>
@@ -189,8 +197,9 @@ export default function Home() {
               </div>
 
               {/* Dhumketu */}
-              <div className="relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-10 shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] flex flex-col hover:-translate-y-1 transition-transform">
-                <div className="space-y-4 sm:space-y-6 flex flex-col h-full">
+              <div className="relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-10 shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] flex flex-col hover:-translate-y-1 transition-transform group cursor-default">
+                <BorderBeam size={200} duration={8} delay={4} borderWidth={3} colorFrom="#ECAE5D" colorTo="#78B5AA" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="space-y-4 sm:space-y-6 flex flex-col h-full z-10 relative">
                   <div className="inline-flex items-center px-3 py-1.5 bg-[#ECAE5D] border-2 border-black text-black text-[10px] sm:text-xs font-black uppercase tracking-widest self-start">
                     Apr 2024 – Oct 2024
                   </div>
@@ -275,8 +284,9 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-12 shadow-[8px_8px_0px_#000]">
-            <div className="flex flex-col md:flex-row gap-12 items-center h-full">
+          <div className="relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-12 shadow-[8px_8px_0px_#000] group">
+            <BorderBeam size={350} duration={12} delay={0} borderWidth={3} colorFrom="#ECAE5D" colorTo="#DD726D" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="flex flex-col md:flex-row gap-12 items-center h-full relative z-10">
               <div className="w-full md:w-1/2 flex flex-col justify-between h-full z-10">
                 <div className="space-y-6">
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ECAE5D] border-2 border-black text-black text-xs font-black uppercase tracking-widest shadow-[2px_2px_0px_#000]">

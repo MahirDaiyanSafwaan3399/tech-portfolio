@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { BorderBeam } from './ui/BorderBeam';
 
 interface ProjectCardProps {
   title: string;
@@ -77,6 +78,7 @@ export default function ProjectCard({
         target="_blank"
         className="group relative flex flex-col h-full overflow-hidden bg-[#f4efe6] border-2 border-black transition-all hover:-translate-y-2 hover:shadow-[8px_8px_0px_#000]"
       >
+        <BorderBeam size={250} duration={10} delay={0} borderWidth={2} colorFrom="#111111" colorTo="#78B5AA" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50" />
         {images && images.length > 0 && (
           <div className="relative w-full h-56 md:h-64 overflow-hidden border-b-2 border-black shrink-0 bg-black">
             {images.map((img, idx) => (
