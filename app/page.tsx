@@ -5,7 +5,7 @@ import VideoPlayer from "./components/VideoPlayer";
 import Navbar from "./components/Navbar";
 import ProjectCard from "./components/ProjectCard";
 import Footer from "./components/Footer/Footer";
-import { ArrowRight, Trophy, Code2, Heart, ExternalLink, Github, Mail, Sparkles } from "lucide-react";
+import { ArrowRight, Trophy, Code2, Heart, ExternalLink, Github, Mail, Sparkles, GraduationCap } from "lucide-react";
 import { BorderBeam } from "./components/ui/BorderBeam";
 import Marquee from "./components/ui/Marquee";
 
@@ -218,6 +218,83 @@ export default function Home() {
           </div>
         </section>
 
+        {/* EDUCATION SECTION */}
+        <section id="education" className="space-y-8 sm:space-y-12 pb-10">
+          <div className="flex items-end justify-between border-b-4 border-black pb-4 sm:pb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
+              Academic Foundation.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* RUET */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-black translate-x-3 translate-y-3" />
+              <div className="relative bg-[#ECAE5D] border-4 border-black p-8 sm:p-10 h-full flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 transition-transform duration-300">
+                <BorderBeam size={300} duration={8} delay={0} borderWidth={2} colorFrom="#111111" colorTo="#f4efe6" className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div>
+                  <div className="flex justify-between items-start mb-10">
+                    <div className="flex flex-col gap-2">
+                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-black text-[#f4efe6] text-xs font-black uppercase tracking-widest shadow-[4px_4px_0px_rgba(255,255,255,0.25)]">
+                        <GraduationCap className="w-4 h-4 text-[#ECAE5D]" />
+                        2024 – Present
+                      </div>
+                      <p className="text-[10px] font-black uppercase text-black/50 tracking-[0.2em] pl-1">Academic Journey</p>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black uppercase leading-[0.85] tracking-tighter mb-8">
+                    Rajshahi University <br /> of Engineering &amp; <br /> Technology (RUET)
+                  </h3>
+                  <div className="flex">
+                    <span className="text-sm sm:text-base font-black text-black bg-white inline-block px-4 py-1.5 border-2 border-black uppercase shadow-[4px_4px_0px_#000]">
+                      B.Sc. in Electrical &amp; Electronic Engineering
+                    </span>
+                  </div>
+                </div>
+                <div className="mt-12 border-t-4 border-black/10 pt-8">
+                  <p className="text-xl font-medium text-black leading-snug text-justify opacity-95">
+                    Focusing on Power Systems and Control Engineering. Researching the synergy between hardware architecture and software logic.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* DRMC */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-black translate-x-3 translate-y-3" />
+              <div className="relative bg-[#78B5AA] border-4 border-black p-8 sm:p-10 h-full flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 transition-transform duration-300">
+                <BorderBeam size={300} duration={8} delay={2} borderWidth={2} colorFrom="#f4efe6" colorTo="#DD726D" className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div>
+                  <div className="flex justify-between items-start mb-10">
+                    <div className="flex flex-col gap-2">
+                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-black text-[#f4efe6] text-xs font-black uppercase tracking-widest shadow-[4px_4px_0px_#ECAE5D]">
+                        <GraduationCap className="w-4 h-4 text-[#78B5AA]" />
+                        Class of 2023
+                      </div>
+                      <p className="text-[10px] font-black uppercase text-black/50 tracking-[0.2em] pl-1">Scholastic Base</p>
+                    </div>
+                  </div>
+
+                  <h3 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black uppercase leading-[0.85] tracking-tighter mb-8">
+                    Dhaka <br /> Residential <br /> Model College
+                  </h3>
+                  <div className="flex">
+                    <span className="text-sm sm:text-base font-black text-[#f4efe6] bg-black inline-block px-4 py-1.5 border-2 border-black uppercase shadow-[4px_4px_0px_#DD726D]">
+                      Higher Secondary Certificate (HSC)
+                    </span>
+                  </div>
+                </div>
+                <div className="mt-12 border-t-4 border-black/10 pt-8">
+                  <p className="text-xl font-medium text-black leading-snug text-justify opacity-95">
+                    Vice-President of DRMC IT Club. Spearheaded the 5th DRMC International Tech Carnival, managing institutional tech growth.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* PROJECTS SECTION */}
         <section id="projects" className="space-y-8 sm:space-y-12 scroll-mt-32">
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between border-b-4 border-black pb-4 sm:pb-8 gap-4">
@@ -296,7 +373,7 @@ export default function Home() {
                     40th National Table Tennis Championship
                   </h2>
                   <p className="text-xl font-medium text-black max-w-lg leading-snug text-justify">
-                    Represented Rajshahi University of Engineering & Technology (RUET) at the national level under the Bangladesh Table Tennis Federation.
+                    Represented Rajshahi University of Engineering &amp; Technology (RUET) at the national level under the Bangladesh Table Tennis Federation.
                   </p>
                   <p className="text-lg font-medium text-black max-w-lg leading-snug text-justify">
                     Stepping onto the court was a testament to months of discipline. It reminds me that whether building a complex circuit or engaging in a high-speed rally, success is built on <span className="bg-[#f4efe6] px-1 border-2 border-black font-bold">precision and persistence.</span>
@@ -319,7 +396,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* FOOTER */}
         <div id="contact" className="w-full border-t-4 border-black mt-32">
           <Footer />
