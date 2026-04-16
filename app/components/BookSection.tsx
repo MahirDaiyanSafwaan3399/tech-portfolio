@@ -75,9 +75,13 @@ const BookSection = () => {
                   </h4>
                   <div className="flex flex-col gap-2.5">
                     {keyTopics.map((topic, idx) => (
-                      <div key={idx} className="flex items-center gap-3 bg-white border-2 border-black px-3 py-2 shadow-[2px_2px_0px_#000] text-xs font-black uppercase hover:bg-[#78B5AA] hover:text-white transition-all cursor-default group">
-                        <span className="text-[#78B5AA] group-hover:text-white">{topic.icon}</span>
-                        {topic.title}
+                      <div key={idx} className="flex items-center gap-3 bg-white border-2 border-black px-3 py-2 shadow-[2px_2px_0px_#000] text-xs font-black uppercase hover:bg-black hover:text-white transition-colors duration-200 cursor-default group">
+                        <div className="shrink-0 text-[#78B5AA] group-hover:text-[#ECAE5D] transition-colors duration-200">
+                          {topic.icon}
+                        </div>
+                        <span className="flex-1">
+                          {topic.title}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -93,9 +97,6 @@ const BookSection = () => {
                       "Master the art of debugging: from deciphering the 'angry language' of compiler errors to using Serial.print() to eavesdrop on the robot's internal thoughts."
                     </p>
                     <div className="pt-2">
-                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-[#f4efe6] text-[10px] font-black uppercase tracking-widest border-2 border-black">
-                        Detective Mode Active
-                      </div>
                     </div>
                   </div>
                 </div>

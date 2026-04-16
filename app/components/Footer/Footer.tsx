@@ -34,14 +34,20 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="text-black font-black hover:text-[#DD726D] transition-colors uppercase flex items-center gap-2 text-sm sm:text-base">
-                  <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 border-black bg-[#78B5AA]"></span>
-                  About Me
+                <Link href="#education" className="text-black font-black hover:text-[#DD726D] transition-colors uppercase flex items-center gap-2 text-sm sm:text-base">
+                  <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 border-black bg-[#DD726D]"></span>
+                  Academic Foundation.
+                </Link>
+              </li>
+              <li>
+                <Link href="#author" className="text-black font-black hover:text-[#DD726D] transition-colors uppercase flex items-center gap-2 text-sm sm:text-base">
+                  <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 border-black bg-black"></span>
+                  The Printed Word.
                 </Link>
               </li>
               <li>
                 <a href="mailto:msafwaan30@gmail.com" className="text-black font-black hover:text-[#DD726D] transition-colors uppercase flex items-center gap-2 text-sm sm:text-base">
-                  <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 border-black bg-black"></span>
+                  <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 border-black bg-white"></span>
                   Contact
                 </a>
               </li>

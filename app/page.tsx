@@ -227,69 +227,95 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             {/* RUET */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-black translate-x-3 translate-y-3" />
-              <div className="relative bg-[#ECAE5D] border-4 border-black p-8 sm:p-10 h-full flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 transition-transform duration-300">
+            <div className="relative group h-full">
+              <div className="absolute inset-0 bg-black translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4" />
+              <div className="relative bg-[#ECAE5D] border-4 border-black p-6 sm:p-10 h-full flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300">
                 <BorderBeam size={300} duration={8} delay={0} borderWidth={2} colorFrom="#111111" colorTo="#f4efe6" className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div>
-                  <div className="flex justify-between items-start mb-10">
-                    <div className="flex flex-col gap-2">
-                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-black text-[#f4efe6] text-xs font-black uppercase tracking-widest shadow-[4px_4px_0px_rgba(255,255,255,0.25)]">
-                        <GraduationCap className="w-4 h-4 text-[#ECAE5D]" />
+                
+                <div className="space-y-8">
+                  <div className="flex justify-between items-center pb-6 border-b-2 border-black/20">
+                    <div className="flex flex-col gap-1">
+                      <p className="text-[10px] font-black uppercase text-black/80 tracking-[0.2em]">Academic Journey</p>
+                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-[#f4efe6] text-[10px] font-black uppercase tracking-widest shadow-[3px_3px_0px_rgba(255,255,255,0.2)]">
+                        <GraduationCap className="w-3.5 h-3.5 text-[#ECAE5D]" />
                         2024 – Present
                       </div>
-                      <p className="text-[10px] font-black uppercase text-black/50 tracking-[0.2em] pl-1">Academic Journey</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-[10px] font-black uppercase text-black/80 tracking-[0.2em]">Major</p>
+                      <p className="text-xs font-black uppercase text-black">Electrical Engineering</p>
                     </div>
                   </div>
                   
-                  <h3 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black uppercase leading-[0.85] tracking-tighter mb-8">
-                    Rajshahi University <br /> of Engineering &amp; <br /> Technology (RUET)
-                  </h3>
-                  <div className="flex">
-                    <span className="text-sm sm:text-base font-black text-black bg-white inline-block px-4 py-1.5 border-2 border-black uppercase shadow-[4px_4px_0px_#000]">
-                      B.Sc. in Electrical &amp; Electronic Engineering
-                    </span>
+                  <div className="space-y-6">
+                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black uppercase leading-[0.8] tracking-tighter">
+                      Rajshahi University <br /> 
+                      <span className="text-white/80 select-none font-black">of Engineering &amp; Technology</span>
+                    </h3>
+                    <div className="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_#000] inline-block">
+                      <p className="text-xs font-black uppercase text-black/80 mb-1">Degree Program</p>
+                      <p className="text-sm sm:text-lg font-black text-black uppercase leading-tight">
+                        B.Sc. in Electrical &amp; Electronic Engineering
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-12 border-t-4 border-black/10 pt-8">
-                  <p className="text-xl font-medium text-black leading-snug text-justify opacity-95">
-                    Focusing on Power Systems and Control Engineering. Researching the synergy between hardware architecture and software logic.
-                  </p>
+
+                <div className="mt-12 pt-8 border-t-2 border-black/10">
+                  <div className="flex gap-4">
+                    <div className="w-1 h-12 bg-black shrink-0" />
+                    <p className="text-lg font-medium text-black leading-snug text-justify max-w-xl">
+                      Focusing on <span className="font-bold">Electronics and VLSI Design.</span> Researching the synergy between hardware architecture and software logic at the frontier of technology.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* DRMC */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-black translate-x-3 translate-y-3" />
-              <div className="relative bg-[#78B5AA] border-4 border-black p-8 sm:p-10 h-full flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 transition-transform duration-300">
+            <div className="relative group h-full">
+              <div className="absolute inset-0 bg-black translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4" />
+              <div className="relative bg-[#78B5AA] border-4 border-black p-6 sm:p-10 h-full flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300">
                 <BorderBeam size={300} duration={8} delay={2} borderWidth={2} colorFrom="#f4efe6" colorTo="#DD726D" className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div>
-                  <div className="flex justify-between items-start mb-10">
-                    <div className="flex flex-col gap-2">
-                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-black text-[#f4efe6] text-xs font-black uppercase tracking-widest shadow-[4px_4px_0px_#ECAE5D]">
-                        <GraduationCap className="w-4 h-4 text-[#78B5AA]" />
+                
+                <div className="space-y-8">
+                  <div className="flex justify-between items-center pb-6 border-b-2 border-black/20">
+                    <div className="flex flex-col gap-1">
+                      <p className="text-[10px] font-black uppercase text-black/80 tracking-[0.2em]">Scholastic Base</p>
+                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-[#f4efe6] text-[10px] font-black uppercase tracking-widest shadow-[3px_3px_0px_#ECAE5D]">
+                        <GraduationCap className="w-3.5 h-3.5 text-[#78B5AA]" />
                         Class of 2023
                       </div>
-                      <p className="text-[10px] font-black uppercase text-black/50 tracking-[0.2em] pl-1">Scholastic Base</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-[10px] font-black uppercase text-black/80 tracking-[0.2em]">Institution</p>
+                      <p className="text-xs font-black uppercase text-black">DRMC</p>
                     </div>
                   </div>
 
-                  <h3 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black uppercase leading-[0.85] tracking-tighter mb-8">
-                    Dhaka <br /> Residential <br /> Model College
-                  </h3>
-                  <div className="flex">
-                    <span className="text-sm sm:text-base font-black text-[#f4efe6] bg-black inline-block px-4 py-1.5 border-2 border-black uppercase shadow-[4px_4px_0px_#DD726D]">
-                      Higher Secondary Certificate (HSC)
-                    </span>
+                  <div className="space-y-6">
+                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black uppercase leading-[0.8] tracking-tighter">
+                      Dhaka Residential <br />
+                      <span className="text-white/80 select-none font-black">Model College (DRMC)</span>
+                    </h3>
+                    <div className="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_#000] inline-block">
+                      <p className="text-xs font-black uppercase text-black/80 mb-1">Certification</p>
+                      <p className="text-sm sm:text-lg font-black text-black uppercase leading-tight">
+                        Higher Secondary Certificate (HSC)
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-12 border-t-4 border-black/10 pt-8">
-                  <p className="text-xl font-medium text-black leading-snug text-justify opacity-95">
-                    Vice-President of DRMC IT Club. Spearheaded the 5th DRMC International Tech Carnival, managing institutional tech growth.
-                  </p>
+
+                <div className="mt-12 pt-8 border-t-2 border-black/10">
+                  <div className="flex gap-4">
+                    <div className="w-1 h-12 bg-white shrink-0" />
+                    <p className="text-lg font-medium text-black leading-snug text-justify max-w-xl">
+                      Vice-President of <span className="font-bold text-[#f4efe6] bg-black px-1">DRMC IT Club.</span> Spearheaded the 5th DRMC International Tech Carnival, managing institutional tech growth and large-scale events.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
