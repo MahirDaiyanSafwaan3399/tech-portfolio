@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import { ArrowRight, Trophy, Code2, Heart, ExternalLink, Github, Mail, Sparkles, GraduationCap } from "lucide-react";
 import { BorderBeam } from "./components/ui/BorderBeam";
 import Marquee from "./components/ui/Marquee";
+import BookSection from "./components/BookSection";
 
 export default function Home() {
   return (
@@ -352,6 +353,9 @@ export default function Home() {
             />
           </div>
         </section>
+
+        {/* AUTHOR SECTION */}
+        <BookSection />
 
         {/* BEYOND THE CODE SECTION */}
         <section className="space-y-8 sm:space-y-12 pb-10">
