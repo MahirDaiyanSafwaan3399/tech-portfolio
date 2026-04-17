@@ -120,7 +120,7 @@ export default function ProjectCard({
             </div>
           </div>
 
-          <p className="text-lg text-black mb-6 leading-snug font-medium line-clamp-4 text-justify">
+          <p className="text-lg sm:text-xl text-black mb-6 leading-normal font-medium line-clamp-4 opacity-95 text-justify">
             {description}
           </p>
 

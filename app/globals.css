@@ -12,17 +12,30 @@
   --color-slate: #333333;
   --color-electric: #ECAE5D;
   --color-lemon: #DD726D;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-sans: var(--font-body);
   --breakpoint-xs: 480px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.55; 
+  letter-spacing: -0.01em;
+  text-align: justify; /* Applied globally as requested */
+  hyphens: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  line-height: 1.0; /* Adjusted for Poppins */
+  letter-spacing: -0.02em; /* Slightly less tight than Bricolage */
+  font-weight: 800;
 }
 
 @layer utilities {

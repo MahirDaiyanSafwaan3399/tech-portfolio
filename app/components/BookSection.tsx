@@ -61,8 +61,8 @@ const BookSection = () => {
                   Bits To Light <br />
                   <span className="text-[#DD726D]">Zero to Robot</span>
                 </h3>
-                <p className="text-lg sm:text-xl font-medium text-black max-w-2xl leading-snug text-justify opacity-90">
-                  A definitive guidebook designed to demystify Arduino, coding, and electronics through relatable analogies. Completely written in <span className="bg-[#78B5AA] px-1 border-2 border-black font-bold whitespace-nowrap">Bangla</span> for maximum accessibility.
+                <p className="text-lg sm:text-xl font-medium text-black max-w-2xl leading-normal opacity-95 text-justify">
+                  A definitive guidebook designed to demystify Arduino, coding, and electronics through relatable analogies. Completely written in <span className="bg-[#78B5AA] px-2 py-0.5 border-2 border-black font-bold whitespace-nowrap">Bangla</span> for maximum accessibility.
                 </p>
               </div>
 
@@ -93,7 +93,7 @@ const BookSection = () => {
                     <Search className="w-5 h-5 text-[#DD726D]" /> Debugging Guide
                   </h4>
                   <div className="space-y-4">
-                    <p className="text-base font-medium text-black leading-relaxed text-justify opacity-90 italic">
+                    <p className="text-lg sm:text-xl font-medium text-black leading-normal opacity-95 italic text-justify">
                       "Master the art of debugging: from deciphering the 'angry language' of compiler errors to using Serial.print() to eavesdrop on the robot's internal thoughts."
                     </p>
                     <div className="pt-2">
