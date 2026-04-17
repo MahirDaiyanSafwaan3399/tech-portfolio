@@ -17,8 +17,8 @@ export default function Home() {
 
       <main className="relative pt-24 md:pt-32 pb-40 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto space-y-20 md:space-y-32 overflow-hidden">
         {/* HERO SECTION */}
-        <section className="relative flex flex-col items-start space-y-8 pt-12 md:pt-20 border-l-4 border-black pl-4 sm:pl-6 md:pl-10 ml-2 sm:ml-0">
-          <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 px-4 py-3 sm:py-2 border-2 border-black bg-white text-xs sm:text-sm text-black shadow-[4px_4px_0px_#000]">
+        <section className="relative flex flex-col items-start space-y-6 sm:space-y-8 pt-10 xs:pt-12 md:pt-20 border-l-4 border-black pl-4 sm:pl-6 md:pl-10 ml-2 sm:ml-0">
+          <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 px-3 sm:px-4 py-2 sm:py-2 border-2 border-black bg-white text-xs sm:text-sm text-black shadow-[4px_4px_0px_#000] animate-fade-up">
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-[#DD726D]" />
               <span className="font-bold uppercase tracking-widest leading-none">Based in Bangladesh</span>
@@ -27,16 +27,16 @@ export default function Home() {
             <span className="font-black uppercase tracking-widest text-[#78B5AA] leading-none">Technopreneur & Developer</span>
           </div>
 
-          <h1 className="text-[2.75rem] xs:text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-black tracking-tighter text-black uppercase leading-[0.9] md:leading-[0.9] break-words">
-            Building <br className="hidden sm:block" />
-            Digital <span className="bg-[#ECAE5D] px-2 border-2 border-black mt-2 inline-block shadow-[4px_4px_0px_#000] sm:shadow-[6px_6px_0px_#000]">Lifelines.</span>
+          <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-black tracking-tighter text-black uppercase leading-[0.9] md:leading-[0.9] break-words animate-fade-up" style={{ animationDelay: "150ms" }}>
+            Architecting <br className="hidden sm:block" />
+            Scalable <span className="bg-[#ECAE5D] px-2 border-2 border-black mt-2 inline-block shadow-[4px_4px_0px_#000] sm:shadow-[6px_6px_0px_#000]">Ventures.</span>
           </h1>
 
-          <p className="text-lg sm:text-2xl md:text-3xl text-black max-w-3xl leading-snug font-medium text-justify">
-            I craft resilient software bridging real-world gaps. From accessibility tools for democratic rights to avionics & propulsion systems.
+          <p className="text-base xs:text-lg sm:text-2xl md:text-3xl text-black max-w-3xl leading-snug font-medium text-justify animate-fade-up" style={{ animationDelay: "300ms" }}>
+            I engineer high-performance software and lead tech-driven startups. Combining technical depth with entrepreneurial vision to solve real-world problems at scale.
           </p>
 
-          <div className="w-full relative max-w-3xl pt-4 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="w-full relative max-w-3xl pt-2 sm:pt-4 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] animate-fade-up" style={{ animationDelay: "450ms" }}>
             <Marquee className="py-2" pauseOnHover={true} repeat={3}>
               {["React Native", "React.js", "Node.js", "Express", "Firebase", "Python", "Kalman Filters", "PID Control", "STM32"].map(skill => (
                 <span key={skill} className="px-4 py-2 mx-2 border-2 border-black bg-white text-sm font-black text-black uppercase shadow-[2px_2px_0px_#000] hover:bg-black hover:text-[#f4efe6] transition-colors whitespace-nowrap cursor-pointer">
@@ -46,17 +46,17 @@ export default function Home() {
             </Marquee>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-8 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 pt-6 sm:pt-8 w-full sm:w-auto animate-fade-up" style={{ animationDelay: "600ms" }}>
             <Link
               href="#projects"
-              className="group flex items-center justify-center gap-3 px-8 py-4 bg-[#78B5AA] border-2 border-black text-black text-lg font-black uppercase hover:-translate-y-1 transition-transform shadow-[4px_4px_0px_#000] w-full sm:w-auto"
+              className="group flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#78B5AA] border-2 border-black text-black text-base sm:text-lg font-black uppercase hover:-translate-y-1 transition-transform shadow-[4px_4px_0px_#000] w-full sm:w-auto"
             >
               View My Work
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
               href="mailto:msafwaan30@gmail.com"
-              className="flex items-center justify-center gap-3 px-8 py-4 bg-white border-2 border-black text-black text-lg font-black uppercase hover:bg-black hover:text-[#f4efe6] transition-colors shadow-[4px_4px_0px_#000] w-full sm:w-auto"
+              className="flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-white border-2 border-black text-black text-base sm:text-lg font-black uppercase hover:bg-black hover:text-[#f4efe6] transition-colors shadow-[4px_4px_0px_#000] w-full sm:w-auto"
             >
               Contact Me
             </a>
@@ -74,10 +74,10 @@ export default function Home() {
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ECAE5D] border-2 border-black text-black text-xs font-black uppercase tracking-widest shadow-[2px_2px_0px_#000]">
                     <Trophy className="w-4 h-4" /> World Champion
                   </div>
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black uppercase leading-none break-words">
+                  <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-black text-black uppercase leading-none break-words">
                     e-ICON World Contest
                   </h2>
-                  <p className="text-xl font-medium text-black max-w-lg leading-snug text-justify">
+                  <p className="text-lg sm:text-xl font-medium text-black max-w-lg leading-snug text-justify">
                     Ranked #1 globally (Ministry of Education Award, Korea). Led team "Han-da" to build SDG-focused solutions.
                   </p>
                 </div>
@@ -111,8 +111,8 @@ export default function Home() {
             <div className="relative z-10 flex flex-col h-full justify-between">
               <Code2 className="w-12 h-12 sm:w-16 sm:h-16 mb-6 text-[#78B5AA]" />
               <div className="space-y-4 sm:space-y-6">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase leading-none break-words">The Code Behind The Cause.</h3>
-                <p className="text-lg font-medium leading-snug opacity-90 text-justify">
+                <h3 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-black uppercase leading-[1.1] break-words">The Code Behind The Cause.</h3>
+                <p className="text-base sm:text-lg font-medium leading-snug opacity-90 text-justify">
                   I debug society. From enabling democratic rights to helping families in financial distress.
                 </p>
               </div>
@@ -122,8 +122,8 @@ export default function Home() {
 
         {/* EXPERIENCE SECTION */}
         <section className="space-y-8 sm:space-y-12 pb-10">
-          <div className="flex items-end justify-between border-b-4 border-black pb-4 sm:pb-8">
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
+          <div className="flex items-end justify-between border-b-4 border-black pb-4 sm:pb-8 lg:pb-10">
+            <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
               Professional Journey.
             </h2>
           </div>
@@ -221,8 +221,8 @@ export default function Home() {
 
         {/* EDUCATION SECTION */}
         <section id="education" className="space-y-8 sm:space-y-12 pb-10">
-          <div className="flex items-end justify-between border-b-4 border-black pb-4 sm:pb-8">
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
+          <div className="flex items-end justify-between border-b-4 border-black pb-4 sm:pb-8 lg:pb-10">
+            <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
               Academic Foundation.
             </h2>
           </div>
@@ -249,12 +249,12 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  <div className="space-y-6">
-                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black uppercase leading-[0.8] tracking-tighter">
+                  <div className="space-y-4 sm:space-y-6">
+                    <h3 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black text-black uppercase leading-[0.9] tracking-tighter break-words">
                       Rajshahi University <br /> 
-                      <span className="text-white/80 select-none font-black">of Engineering &amp; Technology</span>
+                      <span className="text-white/80 select-none font-black block mt-1">of Engineering <br className="lg:hidden" />&amp; Technology</span>
                     </h3>
-                    <div className="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_#000] inline-block">
+                    <div className="bg-white border-2 border-black p-3 sm:p-4 shadow-[4px_4px_0px_#000] inline-block w-full sm:w-auto">
                       <p className="text-xs font-black uppercase text-black/80 mb-1">Degree Program</p>
                       <p className="text-sm sm:text-lg font-black text-black uppercase leading-tight">
                         B.Sc. in Electrical &amp; Electronic Engineering
@@ -295,12 +295,12 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="space-y-6">
-                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black uppercase leading-[0.8] tracking-tighter">
+                  <div className="space-y-4 sm:space-y-6">
+                    <h3 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black text-black uppercase leading-[0.9] tracking-tighter break-words">
                       Dhaka Residential <br />
-                      <span className="text-white/80 select-none font-black">Model College (DRMC)</span>
+                      <span className="text-white/80 select-none font-black block mt-1">Model College <br className="lg:hidden" />(DRMC)</span>
                     </h3>
-                    <div className="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_#000] inline-block">
+                    <div className="bg-white border-2 border-black p-3 sm:p-4 shadow-[4px_4px_0px_#000] inline-block w-full sm:w-auto">
                       <p className="text-xs font-black uppercase text-black/80 mb-1">Certification</p>
                       <p className="text-sm sm:text-lg font-black text-black uppercase leading-tight">
                         Higher Secondary Certificate (HSC)
@@ -324,8 +324,8 @@ export default function Home() {
 
         {/* PROJECTS SECTION */}
         <section id="projects" className="space-y-8 sm:space-y-12 scroll-mt-32">
-          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between border-b-4 border-black pb-4 sm:pb-8 gap-4">
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between border-b-4 border-black pb-4 sm:pb-8 lg:pb-10 gap-4">
+            <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
               Selected Work.
             </h2>
             <Link href="https://github.com/MahirDaiyanSafwaan3399" target="_blank" className="hidden md:flex items-center gap-2 text-black font-black uppercase border-2 border-black px-4 py-2 hover:bg-black hover:text-[#f4efe6] transition-colors shadow-[4px_4px_0px_#000]">
@@ -385,8 +385,8 @@ export default function Home() {
 
         {/* BEYOND THE CODE SECTION */}
         <section className="space-y-8 sm:space-y-12 pb-10">
-          <div className="flex items-end justify-between border-b-4 border-black pb-4 sm:pb-8">
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
+          <div className="flex items-end justify-between border-b-4 border-black pb-4 sm:pb-8 lg:pb-10">
+            <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
               Beyond The Code.
             </h2>
           </div>
