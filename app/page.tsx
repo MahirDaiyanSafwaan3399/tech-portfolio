@@ -233,7 +233,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-black translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4" />
               <div className="relative bg-[#ECAE5D] border-4 border-black p-6 sm:p-10 h-full flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300">
                 <BorderBeam size={300} duration={8} delay={0} borderWidth={2} colorFrom="#111111" colorTo="#f4efe6" className="opacity-0 group-hover:opacity-100 transition-opacity" />
-
+                
                 <div className="space-y-8">
                   <div className="flex justify-between items-center pb-6 border-b-2 border-black/20">
                     <div className="flex flex-col gap-1">
@@ -248,10 +248,10 @@ export default function Home() {
                       <p className="text-xs font-black uppercase text-black">Electrical Engineering</p>
                     </div>
                   </div>
-
+                  
                   <div className="space-y-6">
                     <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black uppercase leading-[0.8] tracking-tighter">
-                      Rajshahi University <br />
+                      Rajshahi University <br /> 
                       <span className="text-white/80 select-none font-black">of Engineering &amp; Technology</span>
                     </h3>
                     <div className="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_#000] inline-block">
@@ -279,7 +279,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-black translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4" />
               <div className="relative bg-[#78B5AA] border-4 border-black p-6 sm:p-10 h-full flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300">
                 <BorderBeam size={300} duration={8} delay={2} borderWidth={2} colorFrom="#f4efe6" colorTo="#DD726D" className="opacity-0 group-hover:opacity-100 transition-opacity" />
-
+                
                 <div className="space-y-8">
                   <div className="flex justify-between items-center pb-6 border-b-2 border-black/20">
                     <div className="flex flex-col gap-1">
@@ -414,12 +414,12 @@ export default function Home() {
               {/* Image Gallery equivalent */}
               <div className="w-full md:w-1/2 relative z-10 mt-8 md:mt-0">
                 <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-auto md:h-[500px] border-2 border-black shadow-[4px_4px_0px_#000] sm:shadow-[8px_8px_0px_#000] overflow-hidden bg-black hover:-translate-y-2 transition-transform duration-300">
-                  <Image
-                    src="/Table Tennis/table tennis.jpg"
-                    alt="40th National Table Tennis Championship"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                  <Image 
+                    src="/Table Tennis/table tennis.jpg" 
+                    alt="40th National Table Tennis Championship" 
+                    fill 
+                    className="object-cover" 
+                    sizes="(max-width: 768px) 100vw, 50vw" 
                   />
                 </div>
               </div>

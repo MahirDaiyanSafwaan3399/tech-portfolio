@@ -21,15 +21,15 @@ const BookSection = () => {
 
       <div className="relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-12 shadow-[8px_8px_0px_#000] group">
         <BorderBeam size={400} duration={15} delay={0} borderWidth={3} colorFrom="#78B5AA" colorTo="#ECAE5D" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
+        
         <div className="flex flex-col lg:flex-row gap-12 items-start relative z-10">
           {/* Book Cover */}
           <div className="w-full lg:w-1/3 flex flex-col gap-6">
             <div className="relative aspect-[3/4] w-full border-4 border-black shadow-[8px_8px_0px_#000] overflow-hidden bg-white group/cover">
-              <Image
-                src="/Arduino Book/cover.png"
-                alt="Zero to Robot Book Cover"
-                fill
+              <Image 
+                src="/Arduino Book/cover.png" 
+                alt="Zero to Robot Book Cover" 
+                fill 
                 className="object-cover transition-transform duration-500 group-hover/cover:scale-105"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
@@ -39,7 +39,7 @@ const BookSection = () => {
                 <span className="font-black uppercase text-sm tracking-widest">Available in Bangla</span>
                 <BookOpen className="w-5 h-5 text-[#ECAE5D]" />
               </div>
-              <a
+              <a 
                 href="https://drive.google.com/file/d/1InUD0Ude8ntxBl721Qc6iG1OOzu7vL1C/view?usp=sharing"
                 target="_blank"
                 className="flex items-center justify-center gap-3 px-6 py-4 bg-[#ECAE5D] border-2 border-black text-black text-lg font-black uppercase hover:-translate-y-1 transition-transform shadow-[4px_4px_0px_#000]"
