@@ -95,20 +95,20 @@ export default function ProjectCard({
           </div>
         )}
 
-        <div className="relative z-10 flex flex-col h-full p-5 sm:p-6 md:p-8">
-          <div className="flex justify-between items-start mb-5 sm:mb-6 gap-3">
-            <div className="space-y-3 sm:space-y-4 flex-1">
+        <div className="relative z-10 flex flex-col h-full p-6 md:p-8">
+          <div className="flex justify-between items-start mb-6">
+            <div className="space-y-4 max-w-[80%]">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-[#f4efe6] font-black uppercase text-xs">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse text-[#ECAE5D]" />
                 <span>{tagline}</span>
               </div>
 
               <div>
-                <h3 className="text-2xl xs:text-3xl lg:text-4xl font-black text-black tracking-tighter uppercase leading-none break-words">
+                <h3 className="text-2xl xs:text-3xl md:text-4xl font-black text-black tracking-tighter uppercase leading-none break-words">
                   {title}
                 </h3>
                 {role && (
-                  <p className="mt-2 text-xs sm:text-sm font-black text-[#DD726D] uppercase tracking-widest">
+                  <p className="mt-2 text-sm font-black text-[#DD726D] uppercase tracking-widest">
                     {role}
                   </p>
                 )}
@@ -120,7 +120,7 @@ export default function ProjectCard({
             </div>
           </div>
 
-          <p className="text-base sm:text-lg text-black mb-5 sm:mb-6 leading-snug font-medium line-clamp-4 text-justify">
+          <p className="text-lg text-black mb-6 leading-snug font-medium line-clamp-4 text-justify">
             {description}
           </p>
 

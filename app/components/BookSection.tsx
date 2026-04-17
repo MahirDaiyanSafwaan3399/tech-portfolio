@@ -13,23 +13,23 @@ const BookSection = () => {
 
   return (
     <section id="author" className="space-y-8 sm:space-y-12">
-      <div className="flex items-end justify-between border-b-4 border-black pb-4 sm:pb-8 lg:pb-10">
-        <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
+      <div className="flex items-end justify-between border-b-4 border-black pb-4 sm:pb-8">
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-black uppercase tracking-tighter break-words">
           The Printed Word.
         </h2>
       </div>
 
       <div className="relative overflow-hidden bg-white border-2 border-black p-6 sm:p-8 md:p-12 shadow-[8px_8px_0px_#000] group">
         <BorderBeam size={400} duration={15} delay={0} borderWidth={3} colorFrom="#78B5AA" colorTo="#ECAE5D" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
+
         <div className="flex flex-col lg:flex-row gap-12 items-start relative z-10">
           {/* Book Cover */}
           <div className="w-full lg:w-1/3 flex flex-col gap-6">
             <div className="relative aspect-[3/4] w-full border-4 border-black shadow-[8px_8px_0px_#000] overflow-hidden bg-white group/cover">
-              <Image 
-                src="/Arduino Book/cover.png" 
-                alt="Zero to Robot Book Cover" 
-                fill 
+              <Image
+                src="/Arduino Book/cover.png"
+                alt="Zero to Robot Book Cover"
+                fill
                 className="object-cover transition-transform duration-500 group-hover/cover:scale-105"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
@@ -39,7 +39,7 @@ const BookSection = () => {
                 <span className="font-black uppercase text-sm tracking-widest">Available in Bangla</span>
                 <BookOpen className="w-5 h-5 text-[#ECAE5D]" />
               </div>
-              <a 
+              <a
                 href="https://drive.google.com/file/d/1InUD0Ude8ntxBl721Qc6iG1OOzu7vL1C/view?usp=sharing"
                 target="_blank"
                 className="flex items-center justify-center gap-3 px-6 py-4 bg-[#ECAE5D] border-2 border-black text-black text-lg font-black uppercase hover:-translate-y-1 transition-transform shadow-[4px_4px_0px_#000]"
@@ -57,11 +57,11 @@ const BookSection = () => {
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ECAE5D] border-2 border-black text-black text-[10px] font-black uppercase tracking-[0.2em] shadow-[2px_2px_0px_#000]">
                   Published Author
                 </div>
-                <h3 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-black uppercase leading-[0.8] tracking-tighter break-words">
+                <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-black uppercase leading-[0.8] tracking-tighter">
                   Bits To Light <br />
                   <span className="text-[#DD726D]">Zero to Robot</span>
                 </h3>
-                <p className="text-base sm:text-lg lg:text-xl font-medium text-black max-w-2xl leading-snug text-justify opacity-90">
+                <p className="text-lg sm:text-xl font-medium text-black max-w-2xl leading-snug text-justify opacity-90">
                   A definitive guidebook designed to demystify Arduino, coding, and electronics through relatable analogies. Completely written in <span className="bg-[#78B5AA] px-1 border-2 border-black font-bold whitespace-nowrap">Bangla</span> for maximum accessibility.
                 </p>
               </div>
@@ -108,8 +108,8 @@ const BookSection = () => {
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 bg-black flex items-center justify-center font-black text-[#f4efe6] border-2 border-black text-xl">M</div>
                 <div>
-                  <p className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest leading-none">Created By</p>
-                  <p className="text-xs sm:text-sm font-black uppercase leading-none mt-1">M&M Studios</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest leading-none">Created By</p>
+                  <p className="text-sm font-black uppercase leading-none">M&M Studios</p>
                 </div>
               </div>
               <div className="hidden sm:flex items-center gap-2 text-[10px] font-black uppercase text-black/40">
